@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DESKTOP-S7VRQTQ"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-01 12:09:34 &#214;S"/>
+        <attribute name="created" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAxOzExOjQyOjUzIMOWw5Y7MzgxMA=="/>
+        <attribute name="edited" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAxOzEyOjA5OjM0IMOWUzszOzM3OTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="toplam, i" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <for variable="i" start="1" end="999" direction="inc" step="1">
+                <if expression="i%3==0&amp;&amp;i%5==0">
+                    <then>
+                        <assign variable="toplam" expression="i+toplam"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

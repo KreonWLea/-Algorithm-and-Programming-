@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DESKTOP-S7VRQTQ"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-01 12:06:17 &#214;S"/>
+        <attribute name="created" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAxOzExOjQyOjUzIMOWw5Y7MzgxMA=="/>
+        <attribute name="edited" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAxOzEyOjA2OjE3IMOWUzsxOzM3ODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, toplam1, toplam2, sonuc" type="Integer" array="False" size=""/>
+            <assign variable="toplam1" expression="0"/>
+            <assign variable="toplam2" expression="0"/>
+            <for variable="i" start="1" end="100" direction="inc" step="1">
+                <assign variable="toplam1" expression="i+toplam1"/>
+            </for>
+            <assign variable="toplam1" expression="toplam1*toplam1"/>
+            <output expression="toplam1" newline="True"/>
+            <for variable="j" start="1" end="100" direction="inc" step="1">
+                <assign variable="toplam2" expression="toplam2+j*j"/>
+            </for>
+            <output expression="toplam2" newline="True"/>
+            <assign variable="sonuc" expression="toplam1-toplam2"/>
+            <output expression="sonuc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

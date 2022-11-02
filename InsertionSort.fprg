@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DESKTOP-S7VRQTQ"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-02 05:46:56 &#214;S"/>
+        <attribute name="created" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAyOzA0OjA1OjU5IMOWUzszNjg3"/>
+        <attribute name="edited" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAyOzA0OjI0OjAxIMOWUzs1O0RFU0tUT1AtUzdWUlFUUTtERVNLVE9QLVM3VlJRVFE7MjAyMi0xMS0wMjswMjowMDowNCDDllM7U2VsZWN0aW9uU2hvcnQuZnByZzs5NTE0"/>
+        <attribute name="edited" value="REVTS1RPUC1TN1ZSUVRRO0RFU0tUT1AtUzdWUlFUUTsyMDIyLTExLTAyOzA1OjQ2OjU2IMOWUzsyOzM3OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <call expression="init"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="sayi-2" direction="inc" step="1">
+                <assign variable="myArray[i]" expression="1+Random(10000)"/>
+            </for>
+            <call expression="insertionSort"/>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <declare name="i, j, key" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="sayi-1" direction="inc" step="1">
+                <assign variable="key" expression="myArray[i]"/>
+                <assign variable="j" expression="i-1"/>
+                <while expression="j&gt;=0 &amp;&amp; myArray[j]">
+                    <assign variable="myArray[j+1]" expression="myArray[j]"/>
+                    <assign variable="j" expression="j-1"/>
+                </while>
+                <assign variable="myArray[j+1]" expression="key"/>
+            </for>
+            <call expression="swapf"/>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <declare name="temp, x, y" type="Integer" array="False" size=""/>
+            <assign variable="temp" expression="myArray[x]"/>
+            <assign variable="myArray[x]" expression="myArray[y]"/>
+            <assign variable="myArray[y]" expression="temp"/>
+            <call expression="printSorted"/>
+            <declare name="sayi, i" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <for variable="i" start="0" end="sayi-2" direction="inc" step="1">
+                <output expression="myArray[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="insertionSort" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <declare name="i, j, key" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="sayi-1" direction="inc" step="1">
+                <assign variable="key" expression="myArray[i]"/>
+                <assign variable="j" expression="i-1"/>
+                <while expression="j&gt;=0 &amp;&amp; myArray[j]">
+                    <assign variable="myArray[j+1]" expression="myArray[j]"/>
+                    <assign variable="j" expression="j-1"/>
+                </while>
+                <assign variable="myArray[j+1]" expression="key"/>
+            </for>
+        </body>
+    </function>
+    <function name="init" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="sayi-2" direction="inc" step="1">
+                <assign variable="myArray[i]" expression="1+Random(10000)"/>
+            </for>
+        </body>
+    </function>
+    <function name="printSorted" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <for variable="i" start="0" end="sayi-2" direction="inc" step="1">
+                <output expression="myArray[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="swapf" type="Integer" variable="x,y">
+        <parameters/>
+        <body>
+            <declare name="sayi, x, y" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="100000"/>
+            <declare name="myArray" type="Integer" array="True" size="sayi"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <assign variable="temp" expression="myArray[x]"/>
+            <assign variable="myArray[x]" expression="myArray[y]"/>
+            <assign variable="myArray[y]" expression="temp"/>
+        </body>
+    </function>
+</flowgorithm>
